@@ -15,12 +15,24 @@ const App = () => {
     "?"
   ])
 
+  const [treasureLocation, setTreasureLocation] = useState(Math.floor(Math.random() * board.length)) // generate a random number step 5
+
+  const [bombLocation, setBombLocation] = useState(Math.floor(Math.random() * board.length))
+
   // this function is being passed into Square 4
   const handleGamePlay = (clickedSquare) => {
     let updateBoard = [...board] // use spread method to spread the whole board
-    updateBoard[clickedSquare] = "🌲" // assign the updateBoard variable to update to a tree on each index
-    setBoard(updateBoard) // use setter function to update board
+    if(clickedSquare === treasureLocation) {
+      updateBoard[clickedSquare] = "💎"
+      setBoard(updateBoard)
+    } else if(clickedSquare === bombLocation) {
+    updateBoard[clickedSquare] = "💣" // assign the updateBoard variable to update to a bomb on each index
+    setBoard(updateBoard)
+    } else {
+      updateBoard[clickedSquare] = "🙊"
+      setBoard(updateBoard)// use setter function to update board
   }
+}
 
   return (
     <>
