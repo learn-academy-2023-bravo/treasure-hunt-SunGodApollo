@@ -34,6 +34,11 @@ const App = () => {
   }
 }
 
+  // function to make button reload
+  const handleRefreshButton = () => {
+    window.location.reload(true)
+  }
+
   return (
     <>
       <h1>Treasure Hunt Game</h1>
@@ -48,7 +53,9 @@ const App = () => {
             />
         })
       }
+      <button className ="button" onClick={handleRefreshButton}>Restart!</button>
       </div>
+
     </>
   )
 }
