@@ -15,16 +15,18 @@ const App = () => {
     "?"
   ])
 
-  // this function is being passed into Square
+  // this function is being passed into Square 4
   const handleGamePlay = (clickedSquare) => {
-    alert(clickedSquare)
+    let updateBoard = [...board] // use spread method to spread the whole board
+    updateBoard[clickedSquare] = "🌲" // assign the updateBoard variable to update to a tree on each index
+    setBoard(updateBoard) // use setter function to update board
   }
 
   return (
     <>
       <h1>Treasure Hunt Game</h1>
       <div className="board">
-      { // map over the array to return the square
+      { // map over the array to return the square Step 1
         board.map((square, index) => {
           return <Square 
             square={square} 
