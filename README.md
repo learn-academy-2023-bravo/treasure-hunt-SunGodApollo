@@ -48,9 +48,18 @@ As a developer, you are tasked with creating a treasure hunt game. The user will
 
 
 - As a user, I can see a counter that shows how many guesses I have left. The counter starts at five and decrements one every time I click on a square that is not the treasure nor the bomb.
+    - branch: counter
+    - create a set variable for the counter and set it equal to 5 for 5 tries
+    - conditional if player picks a square, counter decreases
+
 - As a user, I can see a message informing me that I won the game if I select the square that contains the treasure.
+    - use alert and include string that states the user has won
+
 - As a user, I can see a message informing me that I lost the game if I select the square that contains the bomb.
+    - use alert stating the user has lost
+
 - As a user, I cannot continue to play the game after I win or lose.
+    - reset page after either win or lose.
 - As a user, I can see a message informing me that I lost the game when I run out of turns (the counter reaches zero).
 
 ### 🏔 Stretch Goals

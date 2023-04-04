@@ -1,5 +1,10 @@
 h1 {
   text-align: center;
+  font-size: 4rem;
+}
+
+body {
+  background-color: gray
 }
 
 .square {
@@ -8,17 +13,41 @@ h1 {
   border: 1px solid black;
   font-size: 10rem;
   text-align: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: space-evenly;
+  box-shadow: 0 0 15px purple;
+  animation: infinite;
+  background-color: whitesmoke
+
+
 }
+
 
 .board {
   display: flex;
   flex-wrap: wrap;
   width: 610px;
   margin: 0 auto;
+  justify-content: space-evenly;
+  
 }
 
-.button {
+button {
   padding: 5px;
   display: flex;
   margin: 0 auto;
+  text-align: center;
+  justify-content: space-evenly;
+
+}
+
+.counter {
+  padding: 1px;
+  display: flex;
+  margin: 0 auto;
+  text-align: center;
+  justify-content: space-evenly;
+  font-size: 2rem;
+  
 }
