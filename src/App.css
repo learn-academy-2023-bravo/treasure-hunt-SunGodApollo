@@ -1,10 +1,15 @@
+
+
 h1 {
   text-align: center;
   font-size: 4rem;
+  font-family: 'Rubik 80s Fade', cursive;
+  color: orange;
 }
 
 body {
-  background-color: gray
+  background: rgb(63,94,251);
+  background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
 }
 
 .square {
@@ -16,11 +21,24 @@ body {
   flex-wrap: wrap;
   margin: 0 auto;
   justify-content: space-evenly;
-  box-shadow: 0 0 15px purple;
+  box-shadow: 0 0 15px orange;
   animation: infinite;
-  background-color: whitesmoke
+  background-color: whitesmoke;
+  border-radius: 10px;
 
+  background: #33CCCC; /* Fallback */
+  animation: color 9s infinite linear;
+  text-align: center;
+  
+}
 
+@keyframes color {
+  0%   { background: #33CCCC; }
+  20%  { background: #33CC36; }
+  40%  { background: #B8CC33; }
+  60%  { background: #FCCA00; }
+  80%  { background: #33CC36; }
+  100% { background: #33CCCC; }
 }
 
 
@@ -30,6 +48,7 @@ body {
   width: 610px;
   margin: 0 auto;
   justify-content: space-evenly;
+  border-radius: 5px;
   
 }
 
@@ -39,6 +58,8 @@ button {
   margin: 0 auto;
   text-align: center;
   justify-content: space-evenly;
+  border-radius: 10px;
+  
 
 }
 
@@ -49,5 +70,6 @@ button {
   text-align: center;
   justify-content: space-evenly;
   font-size: 2rem;
+  font-family: 'Rubik 80s Fade', cursive;
   
 }

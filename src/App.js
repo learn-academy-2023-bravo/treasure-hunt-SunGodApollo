@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import "./App.css"
 import Square from './components/Square'
 import Counter from './components/Counter'
+import swal from 'sweetalert'
 
 
 const App = () => {
@@ -29,22 +30,22 @@ const App = () => {
     if(clickedSquare === treasureLocation) {
       updateBoard[clickedSquare] = "💎"
       setBoard(updateBoard)
-      alert("You found the diamond! Congrats.")
+      swal("You found the diamond! Congrats.")
       setTimeout(() => {
         window.location.reload()
-      }, 2000)
+      }, 3000)
     } else if(clickedSquare === bombLocation) {
     updateBoard[clickedSquare] = "💣" // assign the updateBoard variable to update to a bomb on each index
     setBoard(updateBoard)
-    alert("You dead. Game over.")
+    swal("You dead. Game over.")
     setTimeout(() => {
       window.location.reload()
-    }, 2000)
+    }, 3000)
     } else if(count === 0) {
-      alert("You are out of turns. Sucks to suck.")
+      swal("You are out of turns. Sucks to suck.")
       setTimeout(() => {
         window.location.reload()
-      }, 2000)
+      }, 3000)
     }
     else {
       updateBoard[clickedSquare] = "🙊"
